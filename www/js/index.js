@@ -57,7 +57,9 @@ var app = {
 		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=no');
 		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=no,toolbar=no,hidenavigationbuttons=no');
 		
-		cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias2'), '_self', 'location=no');
+		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias2'), '_self', 'location=no');
+		
+		cordova.InAppBrowser.open(encodeURI('index.html'), '_self', 'location=no');
 	   
     }
 	
