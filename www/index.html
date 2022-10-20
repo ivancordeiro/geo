@@ -19,7 +19,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html  manifest="offlinedatabase.manifest" >
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -39,20 +39,12 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Geolocaliacoes</title>
-    
-          <script type="text/javascript" src="offlinedatabaseJS.js" ></script>
-   <style>
- 	body { font-family:Arial; font-size:12px; }
-	 	input { font-family:Arial; font-size:12px; height:35px; margin-bottom:2px; }
-   </style>
-   
-   
+    <title>App</title>
 </head>
 
-<body onLoad="onInit()" >
+<body>
     <div class="app">
-        <h1>Geolocaliacoes</h1>
+        <h1>App</h1>
         <div id="deviceready" class="blink">
             <p class="event listening">.../p>
             <p class="event received">Connectando...</p>
@@ -63,136 +55,6 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    
-    
-          <form name="itemForm">
-		<label for="id">Id:</label><input type="text" name="id" id="id" size=2 disabled="true" style="height:10px;"/><br>
-		<label for="nome"></label><input type="text" name="nome" id="nome" size=20/><br>
-		<label for="idade">La</label><input type="text" name="lati" id="lati" size=20 /> <br>
-        	<label for="idade">loi</label><input type="text" name="longi" id="longi" size=20 /> 
-        
-        <br>
-		<br>
-		<input type="button" name="create" value="Create" onClick="onCreate()" />
-		<input type="button" name="update" value="Update" onClick="onUpdate()" />
-		<input type="button" name="delete" value="Delete" onClick="onDelete()" />
-      </form>
-
-      <div id="status"></div>
-      
-      
-      
-            <ul  id="itemData" style="cursor:pointer;">
-      </ul>
-      
-      
-      
 </body>
 
 </html>
-
-
-
-
-<script type="text/javascript">
-
-
-var suaLatitude = '';
-var suaLongitude = '';
-
-
-
-function getLocation( ) {
-
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition( sucessoGeolocalizacao , erroGeolocalizacao );
-  } else {
-    alert( "Seu navegador não suporta geolocalização." );
-  }
-}
-
-
-
-
-
-
-function sucessoGeolocalizacao(position) {
-
-var suaLatitude = position.coords.latitude ;
-var suaLongitude = position.coords.longitude ;
-
-
-  //alert( "Latitude: " + position.coords.latitude + " - Longitude: " + position.coords.longitude ) ;
- /////////// alert( "suaLatitude: " + suaLatitude + " - suaLongitude: " + suaLongitude ) ;
-  
-if( suaLatitude != '' && suaLongitude != ''  ){
-
-
-document.getElementById('lati').value = suaLatitude ;
-document.getElementById('longi').value = suaLongitude ;
-
-// var nome = document.getElementById('nome').value ;
-
-
-/*
-
-$.ajax({//1
-//dataType: "json",
-type: "POST",
-url: "salvar.php?sid="+Math.random(),
-data: 'sua_lat=' + suaLatitude + '&sua_long=' + suaLongitude  + '&nome=' + nome  ,
-
-success: function(retorno){//2  
-
-// 
-alert( 'retorno:' + retorno + "Lat: " + suaLatitude + " - Long: " + suaLongitude  );
-
-}//2
-
-
-}); //1
-*/ 
-
-
-
-
-
-
-
-
-
-}
-
-  
-}
-
-
-
-
-  // Funcao que serah chamada caso de algum erro nesse processo de obter a posicao
-function erroGeolocalizacao ( erro ){
-    var erroDescricao = 'Erro na geolocalização:';
-    switch( erro.code ) {
-      case erro.PERMISSION_DENIED:
-        erroDescricao += 'usuário não autorizou a geolocalização.';
-      break;
-      case erro.POSITION_UNAVAILABLE:
-        erroDescricao += 'geolocalização indisponível.';
-      break;
-      case erro.TIMEOUT:
-        erroDescricao += 'tempo expirado.';
-      break;
-      case erro.UNKNOWN_ERROR:
-        erroDescricao += 'erro desconhecido - talvez seu navegador não suporte geolocalização!';
-      break;
-    }
-    alert( erroDescricao )
-  }
-  
-  
-  getLocation();
-
-</script>
-
-
