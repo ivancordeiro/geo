@@ -52,14 +52,13 @@ var app = {
 	
 	inapp: function() {
 
-		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=yes');
-		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=no,hidenavigationbuttons=no');
-		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=no');
-		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias'), '_system', 'location=no,toolbar=no,hidenavigationbuttons=no');
-		
+	
 		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/ocorrencias2'), '_self', 'location=no');
 		
-		//cordova.InAppBrowser.open(encodeURI('index.html'), '_self', 'location=no');
+		//cordova.InAppBrowser.open(encodeURI('https://ivanprogramador.com.br/teste/dent/app'), '_system', 'location=no');
+
+        cordova.InAppBrowser.open(encodeURI('http://ivanprogramador.com.br/teste/vagas/app'), '_system', 'location=no');
+       
 	   
     }
 	
